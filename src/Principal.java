@@ -50,5 +50,21 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
+        var filmeAna = new Filme(){
+            filmeAna.setDuracaoEmMinutos(200);
+            filmeAna.setNome("A sociedade da neve")
+            filmeAna.setAnoDeLancamento(2023);
+            filmeAna.avalia(10);
+        }
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList();
+        listaDeFilmes.add(filmeAna);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(meuFilme);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: "  + listaDeFilmes.get(0).toString());
+        System.out.println(listaDeFilmes);
+
+
     }
 }
