@@ -6,9 +6,6 @@ import src.br.com.screenmatch.model.Episodio;
 import src.br.com.screenmatch.model.Filme;
 import src.br.com.screenmatch.model.Serie;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme("Interestelar", 2014);
@@ -22,7 +19,7 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        Serie greysAnatomy = new Serie("Grey's Anatomy", 2000);
+        Serie greysAnatomy = new Serie("Grey's Anatomy", 2005);
         greysAnatomy.exibeFichaTecnica();
         greysAnatomy.setTemporadas(20);
         greysAnatomy.setEpisodiosPorTemporada(25);
@@ -46,22 +43,6 @@ public class Principal {
         episodio.setSerie(greysAnatomy);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
-
-        var novoFilme = new Filme("A sociedade da neve", 2024);
-        novoFilme.setDuracaoEmMinutos(200);
-        novoFilme.avalia(10);
-
-        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
-        listaDeFilmes.add(novoFilme);
-        listaDeFilmes.add(outroFilme);
-        listaDeFilmes.add(meuFilme);
-        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
-        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
-        System.out.println(listaDeFilmes);
-        System.out.println("toString do Filme " + listaDeFilmes.get(0).toString());
-
-
-
 
     }
 }
